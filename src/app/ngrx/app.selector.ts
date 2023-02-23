@@ -20,5 +20,8 @@ import { featureName } from './app.reducer';
 // 型の指定がないと動かない場合があります。
 export const appState = createFeatureSelector(featureName);
 
-export const selectTest = createSelector(appState, (state) => state);
-export const selectName = createSelector(appState, (state: any) => state.name);
+export const selectTest = createSelector(appState, (state: any) => state.user);
+export const selectName = createSelector(
+  appState,
+  (state: any) => state.user.name
+);

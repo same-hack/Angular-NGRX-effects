@@ -38,12 +38,18 @@ export const featureName = 'main';
 // };
 export const initialState = {
   // selectedUser: { id: 999, name: 'samehack' },
-  id: 999,
-  name: 'samehack',
+  user: {
+    id: 999,
+    name: 'samehack',
+  },
 };
 export const appReducer = createReducer(
   initialState,
-  on(updateUserName, (state, { newName }) => ({ ...state, name: newName }))
+  on(updateUserName, (state, { newName }) => ({
+    ...state,
+    // ...user,
+    name: newName,
+  }))
 );
 
 // export const initialState = {};
