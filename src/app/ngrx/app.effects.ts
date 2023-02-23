@@ -5,7 +5,6 @@ import { Store } from '@ngrx/store';
 import { AppService } from '../services/app.service';
 import * as AppAction from './app.action';
 import { zip } from 'rxjs';
-import { User } from './app.reducer';
 
 @Injectable()
 export class AppEffects {
@@ -21,8 +20,8 @@ export class AppEffects {
   //     switchMap(() => {
   //       return this.service.fetchUsers().pipe(
   //         map((response: any) => {
-  //           const fetchedUsers: User[] = [];
-  //           response.forEach((user: User) => {
+  //           const fetchedUsers: any[] = [];
+  //           response.forEach((user: any) => {
   //             const userInfo = {
   //               id: user.id,
   //               name: user.name,
