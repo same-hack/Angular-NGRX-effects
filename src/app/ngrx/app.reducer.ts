@@ -57,7 +57,7 @@ export const appReducer = createReducer(
   initialState,
   on(updateUserName, (state, { newName }) => ({
     ...state,
-    users: state.users.map((user) => ({ id: 777, name: newName })),
+    users: state.users.map((user) => ({ ...user, name: newName })),
   }))
 );
 
